@@ -1,0 +1,14 @@
+schema_version: "1.1"
+name: two-items-stay-joined
+description: "A short update with only two simple items is not forced into bullets."
+tags: [layout, restraint]
+execution:
+  max_turns: 8
+  timeout_seconds: 400
+  allowed_tools: [Skill, Read, Glob, Grep]
+  prompt: "With Top-Down Brief, write a short email to the finance team saying the Q3 board pack is final and attached, and that the only changes since the draft are the updated cash forecast and the corrected headcount figure on page 4."
+graders:
+  - name: restraint
+    type: llm
+    focus: last_message
+    criteria: "Look only at the email. PASS if it is short and the two changes (updated cash forecast, corrected headcount on page 4) are either joined in one sentence or shown as two short lines; there are no headings and no long bulleted sections. A one-line \"To fill in\" note after the email is fine.\nFAIL if it adds headings, or pads the message with extra bulleted sections."

@@ -1,0 +1,18 @@
+schema_version: "1.1"
+name: bad-news-stays-prose
+description: "A sensitive message keeps its core in prose; only practical next steps may be listed."
+tags: [layout, sensitive]
+execution:
+  max_turns: 10
+  timeout_seconds: 600
+  allowed_tools: [Skill, Read, Glob, Grep]
+  prompt: "Use the Top-Down Brief plugin to draft this. I need to tell Priya, a team lead who has been with us six years, that her role is being made redundant because we are closing the Lagos office at the end of December. It isn't about her performance, which has been excellent. She gets three months' pay, her bonus pro-rated, outplacement support, and we'll write a reference. HR (Tom) will meet her on Tuesday to go through it. I'm sorry to do this by email; we'll also speak by phone tomorrow."
+graders:
+  - name: core-in-prose
+    type: llm
+    focus: last_message
+    criteria: "Look only at the drafted message to Priya. PASS if the news itself (the redundancy, the reason, that it is not about her performance) is written in warm prose sentences, not as a bulleted list, and the tone is humane. A short list of the practical package items or next steps is fine.\nFAIL if the news or the reasons are delivered as bullet points, or the tone reads cold or mechanical."
+  - name: point-early
+    type: llm
+    focus: last_message
+    criteria: "PASS if the redundancy is stated within the first three sentences of the message (a brief context line before it is acceptable).\nFAIL if it is buried later."

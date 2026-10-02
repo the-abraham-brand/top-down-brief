@@ -80,6 +80,8 @@ Run `references/checklist.md` against the draft and fix anything that fails. The
 
 Keep commentary out of the piece itself.
 
+**Short messages** (a reply or confirmation of about five sentences or fewer, with no key line): give the message only. Skip the Structure section and the commentary; add "To fill in" only if there is a placeholder, in one line. Notes about a two-line email are longer than the email.
+
 ### Review mode
 
 1. **Verdict**: one line: *Ready to send*, *Minor fixes*, or *Needs restructuring*, with the single biggest reason.
@@ -93,6 +95,6 @@ Keep commentary out of the piece itself.
 
 - **Bad news or sensitive messages** (redundancies, incidents, complaints to a senior person): still state the point early, but a one-sentence context line before it is fine so the reader is not blindsided. Burying bad news reads as evasive.
 - **A reader who will resist the conclusion**, or a conclusion that will surprise them: lead with a short deductive chain, then the recommendation.
-- **Very short messages** (a two-line confirmation): do not force a key line. Answer first, courteous close, done.
+- **Very short messages** (a two-line confirmation): do not force a key line, bullets or headings. Answer first, courteous close, done, and no Structure section after it.
 - **Legal, regulatory or contractual wording**: do not restructure mandated text; flag it and polish only what surrounds it.
 - **Replies in an existing thread**: answer the question asked in the thread first; skip the S-C-Q introduction because the thread already provides it.

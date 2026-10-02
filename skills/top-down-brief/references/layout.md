@@ -12,11 +12,15 @@ The pyramid decides the order of ideas. Layout decides how the reader's eye find
 4. **The ask.** Each action the reader must take is its own numbered line, with the owner and the date.
 5. **Figures to compare.** Prices, ranges, tiers or options compared on the same measure go on separate lines, or in a small table if there are two or more measures.
 
+## Group long lists
+
+Six or more items at the same level are too many to take in as one list. Group them into two to five groups (by owner, phase, place or theme), give each group a bold sub-heading or one-sentence lead-in, and list its items beneath. A single flat list of nine actions is a pile, not a structure. The exception is a short dated checklist the reader will tick off in order, where date order is the point; even then, lead with the item that everything else depends on.
+
 ## Keep as prose
 
 - **The governing thought** and the one-line context before it.
 - **A chain of reasoning**, where each sentence depends on the one before ("because", "so", "therefore"). Breaking a deductive chain into bullets breaks the logic.
-- **Two short items**, which read better joined with "and".
+- **One or two short items.** Join two items with "and" in one sentence ("The only changes are the updated cash forecast and the corrected headcount on page 4."). Never turn one or two short items into bullets, and never add a heading to a message that has no key line.
 - **Bad news and sensitive messages**, where bullets read as cold. State the point in prose; list only the practical next steps.
 - **A short reply** of two or three sentences.
 

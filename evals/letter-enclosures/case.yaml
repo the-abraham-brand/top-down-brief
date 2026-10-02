@@ -1,0 +1,14 @@
+schema_version: "1.1"
+name: letter-enclosures
+description: "A formal letter keeps short paragraphs for its argument and lists its enclosures and requirements."
+tags: [layout, letter]
+execution:
+  max_turns: 10
+  timeout_seconds: 600
+  allowed_tools: [Skill, Read, Glob, Grep]
+  prompt: "Draft a formal letter with Top-Down Brief from Northwind Logistics to the Dubai Land Department requesting an extension of 60 days, to 15 January 2027, for our warehouse permit renewal. Reason: our contractor's fire-safety certificate was delayed by the civil defence inspection backlog; the inspection is now booked for 20 November. We are enclosing the inspection booking confirmation, the contractor's letter explaining the delay, our current permit, and the trade licence. Contact: Layla Haddad, compliance manager, 04 555 0101."
+graders:
+  - name: letter-shape
+    type: llm
+    focus: last_message
+    criteria: "Look only at the letter. PASS if the request (a 60-day extension to 15 January 2027) is in the first paragraph, the reason is explained in short prose, and the four enclosures are listed on separate lines (numbered or bulleted).\nFAIL if the request is buried, or the enclosures are run together in a sentence."

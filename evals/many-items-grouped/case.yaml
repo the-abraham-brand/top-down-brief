@@ -1,0 +1,25 @@
+schema_version: "1.1"
+name: many-items-grouped
+description: "Nine action items from notes are grouped into a few headed groups, not one flat list or a paragraph."
+tags: [layout, draft]
+execution:
+  max_turns: 10
+  timeout_seconds: 600
+  allowed_tools: [Skill, Read, Glob, Grep]
+  prompt: |
+    Draft an email with Top-Down Brief to the leadership team. Goal: get everything ready for the Riyadh office opening on 1 December. My notes:
+    - sign lease (legal, Fri 16 Oct)
+    - commercial registration (Hana, by 30 Oct)
+    - open local bank account (finance, 6 Nov)
+    - hire office manager (HR, offer by 13 Nov)
+    - IT fit-out: laptops, network, phones (IT, 20 Nov)
+    - furniture delivery (facilities, 24 Nov)
+    - health insurance for 4 staff (HR, 20 Nov)
+    - launch event invitations (marketing, send 10 Nov)
+    - press release (marketing, 1 Dec)
+    Biggest risk: commercial registration, everything else waits on it.
+graders:
+  - name: grouped
+    type: llm
+    focus: last_message
+    criteria: "Look only at the drafted email. PASS if the nine actions appear as points (each on its own line with owner and date) grouped under 2 to 5 short headings or lead-in sentences (for example legal and finance, people, premises and IT, launch), and the commercial registration risk is stated near the top.\nFAIL if they are written as paragraphs, or as one flat ungrouped list of nine, or owners and dates are missing."

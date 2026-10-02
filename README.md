@@ -73,6 +73,14 @@ skills/
   review/SKILL.md          /top-down-brief:review
 ```
 
+## What's new in 1.1.1
+
+Stress-tested on seven kinds of message, and tuned so the layout rule knows when to stop:
+- **Long lists are grouped.** Six or more items go under two to five short headings (by owner, phase or theme), not one flat list.
+- **One or two items stay in a sentence.** Short messages get no bullets and no headings.
+- **Short replies come back bare.** A two-line confirmation is returned without a Structure section or commentary.
+- **Sensitive messages stay in prose,** with only the practical next steps listed.
+
 ## What's new in 1.1.0
 
 Points are now laid out as points. Before, a draft could announce "three changes" and then explain them in one long paragraph, leaving the reader to dig them out; the list appeared only in the Structure summary. Now, whenever a sentence announces a set or there are three or more parallel items, each gets its own numbered or bulleted line under a one-sentence lead-in, and the body matches the Structure summary. Prose stays for the main point, chains of reasoning and sensitive messages. Layout is the seventh check in reviews, and email paragraphs are capped at three sentences.

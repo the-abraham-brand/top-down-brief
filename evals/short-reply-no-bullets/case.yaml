@@ -1,0 +1,18 @@
+schema_version: "1.1"
+name: short-reply-no-bullets
+description: "A two-line confirmation stays two lines: no headings, no bullets."
+tags: [layout, short]
+execution:
+  max_turns: 8
+  timeout_seconds: 400
+  allowed_tools: [Skill, Read, Glob, Grep]
+  prompt: "Using Top-Down Brief, write a quick reply to Karim confirming our meeting on Thursday 8 October at 3pm at his office, and asking him to bring the signed NDA."
+graders:
+  - name: short-and-plain
+    type: llm
+    focus: last_message
+    criteria: "Look only at the email to Karim itself, not any notes after it. PASS if it is a short message (about five sentences or fewer in the body), with no bullet points, no numbered lists and no headings, confirming Thursday 8 October at 3pm at his office and asking for the signed NDA.\nFAIL if it uses bullets, numbered lines or headings, or is padded."
+  - name: no-padding
+    type: llm
+    focus: last_message
+    criteria: "PASS if the response is essentially just the short email, followed at most by a brief 'To fill in' note of one or two sentences about placeholders (signature, time zone), with no Structure section and no list of checks.\nFAIL if it adds a Structure section, a Worth checking section, or several lines of commentary."

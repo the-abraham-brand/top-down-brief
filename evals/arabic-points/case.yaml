@@ -1,0 +1,19 @@
+schema_version: "1.1"
+name: arabic-points
+description: "An Arabic email with a list buried in a paragraph comes back in Arabic, with the list laid out."
+tags: [layout, arabic]
+execution:
+  max_turns: 10
+  timeout_seconds: 600
+  allowed_tools: [Skill, Read, Glob, Grep]
+  prompt: |
+    استخدم Top-Down Brief لإعادة صياغة هذا البريد، فهو طويل:
+    "السيد خالد المحترم،
+    بالإشارة إلى طلبكم بخصوص تجديد عقد الصيانة، نود إفادتكم بأننا راجعنا العرض المقدم من شركتكم. ولكي نتمكن من إتمام التجديد نحتاج منكم ثلاثة أمور، أولها نسخة محدثة من السجل التجاري سارية المفعول، وثانيها شهادة التأمين ضد المسؤولية المهنية بحد أدنى مليون درهم، وثالثها جدول زمني للزيارات الدورية لعام 2027 يتضمن زيارة واحدة على الأقل كل شهر. ونأمل أن تصلنا هذه المستندات قبل نهاية شهر أكتوبر حتى يتسنى لنا توقيع العقد قبل انتهاء العقد الحالي في 30 نوفمبر.
+    وتفضلوا بقبول فائق الاحترام،
+    سارة"
+graders:
+  - name: arabic-and-listed
+    type: llm
+    focus: last_message
+    criteria: "Look only at the revised email. PASS if it is written in Arabic, and the three required documents (updated commercial registration, professional liability insurance of at least one million dirhams, a 2027 visit schedule with at least one visit a month) appear as three separate numbered or bulleted lines, with the deadline (end of October) clearly stated.\nFAIL if it switches to English, or the three items stay in a paragraph."
