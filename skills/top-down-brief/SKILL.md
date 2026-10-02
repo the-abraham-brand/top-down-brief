@@ -47,11 +47,13 @@ Sketch the skeleton in this order:
 
 Reference files for this step:
 - `references/pyramid-rules.md`: full rules, with fixes for the common failures. Read it for anything longer than a short email, and always in Review mode.
+- `references/layout.md`: when to use points and when to keep prose. Read it before writing anything with a key line.
 - `references/introductions.md`: S-C-Q patterns for directives, spending approvals, how-to, choosing among options, process changes, proposals, progress reviews, bad news and incident reports. Read the matching pattern before drafting an introduction.
 
 ## Step 3: Write it
 
 - Follow the format for the piece type in `references/formats.md`.
+- **Lay out points as points** (`references/layout.md`, always read it). The body shows the same structure as the skeleton: when a sentence announces a set ("three changes", "two conditions") or there are three or more parallel items (requirements, risks, options, steps, figures), put each on its own numbered or bulleted line under a one-sentence lead-in. Never announce a list and then explain it in a paragraph. Keep prose for the governing thought, chains of reasoning and sensitive messages. In email, keep paragraphs to three sentences.
 - Apply `references/tone.md`: plain, precise, courteous, confident without overclaiming.
 - Write headings and key-line points as full statements of the idea, in parallel grammatical form, not as labels ("Costs will fall 12% in year one", not "Costs").
 - Never invent facts, figures, names, dates or commitments. Where something is needed but was not provided, insert a clear placeholder such as `[deadline]` or `[Q3 figure]` and list the placeholders after the draft.
@@ -66,13 +68,14 @@ Run `references/checklist.md` against the draft and fix anything that fails. The
 3. Key-line points are the same kind, MECE and deliberately ordered.
 4. No intellectually blank assertions ("There are three issues", "Several factors were considered") where the actual insight should be.
 5. The reader knows exactly what to do next, and by when.
+6. Every announced set, and every run of three or more parallel items, is laid out as points in the body, not only in the Structure summary.
 
 ## Output format
 
 ### Draft mode
 
 1. The finished piece, ready to send (subject line included for emails).
-2. **Structure**: 3 to 5 lines showing the skeleton (governing thought, then the key-line points) so the user can check the logic at a glance.
+2. **Structure**: 3 to 5 lines showing the skeleton (governing thought, then the key-line points) so the user can check the logic at a glance. It must match the layout of the piece: anything shown as a list here is a list in the piece.
 3. **To fill in**: only if there are placeholders.
 
 Keep commentary out of the piece itself.
@@ -80,9 +83,9 @@ Keep commentary out of the piece itself.
 ### Review mode
 
 1. **Verdict**: one line: *Ready to send*, *Minor fixes*, or *Needs restructuring*, with the single biggest reason.
-2. **Scorecard**: the six checks from `references/checklist.md` (Answer first, Question answered, Key-line logic, Support, Clear ask, Tone), each marked Pass / Fix, with a few words on why.
+2. **Scorecard**: the seven checks from `references/checklist.md` (Answer first, Question answered, Key-line logic, Support, Clear ask, Layout, Tone), each marked Pass / Fix, with a few words on why.
 3. **What's getting in the way**: the top issues, most important first, each naming the rule broken and quoting the sentence or section concerned. Only issues that matter; no padding.
-4. **Revised version**: the full rewrite (skip this if the verdict is *Ready to send*; show only the small edits instead).
+4. **Revised version**: the full rewrite, with points laid out as points (skip this if the verdict is *Ready to send*; show only the small edits instead). A request to make a piece shorter is also a request to make it scannable: lay out every list you find.
 5. **Structure**: the skeleton of the revised version.
 6. **To fill in / Worth checking**: placeholders, and any substance concerns (unsupported claims, missing data, a recommendation the evidence does not back).
 

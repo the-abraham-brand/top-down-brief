@@ -11,7 +11,7 @@ The aim: the reader trusts the writer, understands the message on first reading,
 5. **Active voice by default.** "Finance approved the budget", not "the budget was approved". Use passive only when the actor is unknown or irrelevant, or to avoid blaming someone.
 6. **Neutral and respectful.** No sarcasm, exclamation marks, emojis, slang, internal jokes or emotionally loaded words in official material. Inclusive, gender-neutral language.
 7. **Concrete images.** Turn abstract noun-strings into subjects doing things: "We must redeploy the sales force to match the new trading environment", not "the enhancement of cost-effectiveness via sales force realignment initiatives".
-8. **One idea per sentence, one topic per paragraph.** Sentences averaging 15–20 words; paragraphs of 2–4 sentences in email.
+8. **One idea per sentence, one topic per paragraph.** Sentences averaging 15–20 words; paragraphs of at most three sentences in email. A paragraph that lists three or more things is a list: lay it out (`layout.md`).
 
 ## Wording swaps
 

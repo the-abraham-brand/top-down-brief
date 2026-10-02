@@ -1,6 +1,6 @@
 # Pre-send checklist
 
-Use this on every draft, including your own. In Review mode, report the six headline checks as the scorecard (Pass / Fix + a few words).
+Use this on every draft, including your own. In Review mode, report the seven headline checks as the scorecard (Pass / Fix + a few words).
 
 ## 1. Answer first
 - [ ] The main point (conclusion, recommendation or request) is in the first one or two sentences.
@@ -32,7 +32,16 @@ Use this on every draft, including your own. In Review mode, report the six head
 - [ ] Actions are worded as end results with owners and dates.
 - [ ] If no action is needed, that is said ("No action needed; for your information").
 
-## 6. Tone
+## 6. Layout
+- [ ] Every sentence that announces a set ("three changes", "two conditions", "as follows") is followed by one point per item, not a paragraph.
+- [ ] Three or more parallel items (requirements, risks, options, steps, documents, figures) are on their own lines.
+- [ ] Each list sits under a one-sentence lead-in that states the point; points are parallel, one idea each, bold lead-ins where they help scanning.
+- [ ] The ask is a numbered list of actions with owners and dates when there is more than one action.
+- [ ] Email paragraphs are three sentences or fewer; nothing is nested more than one level.
+- [ ] Prose is kept where it belongs: the governing thought, chains of reasoning, sensitive messages.
+- [ ] The body has the same structure as the Structure summary.
+
+## 7. Tone
 - [ ] Register fits the reader (see `tone.md`).
 - [ ] Plain words; no jargon, filler, hedges or buzzwords.
 - [ ] Active voice by default; sentences mostly under ~25 words.
@@ -41,6 +50,6 @@ Use this on every draft, including your own. In Review mode, report the six head
 - [ ] Names, titles, dates and attachments referenced are correct and present.
 
 ## Verdict rules
-- **Ready to send**: all six pass.
-- **Minor fixes**: checks 1–3 pass; only wording, support or tone issues.
+- **Ready to send**: all seven pass.
+- **Minor fixes**: checks 1–3 pass; only support, layout or tone issues (a few lists to lay out).
 - **Needs restructuring**: check 1, 2 or 3 fails.

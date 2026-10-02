@@ -1,0 +1,48 @@
+schema_version: "1.1"
+name: points-in-body
+description: "A long email that announces sets of items in paragraphs comes back with those items laid out as points in the body, not only in the Structure summary."
+tags: [layout, review]
+execution:
+  max_turns: 12
+  timeout_seconds: 600
+  allowed_tools: [Skill, Read, Glob, Grep]
+  prompt: |
+    Use the Top-Down Brief plugin to format this email. It seems too long now.
+
+    "Dear Ms Okafor,
+
+    Brightline Payroll have come back on our proposal to move payroll to them.
+
+    The short version: they can do it, and they are the best fit we have found. One point needs correcting in how we have been describing the arrangement.
+
+    They said yes to everything we asked. They can run monthly and off-cycle payroll, file our tax returns in all three countries, and host the employee self-service portal. Their integration with our HR system is already live, so unlike our conversation with Paymore there is no waiting for them to build anything. Their errors-and-omissions cover is up to USD 5 million and can be increased. Most importantly, our HR system can push approved changes to them automatically without anyone re-keying them.
+
+    We do have one correction. We have been describing this as handing payroll risk to Brightline. That is not quite what is on offer. Brightline process what our own approvers sign off. They are liable for their own processing mistakes, but not for a change our team approves that turns out to be wrong. That risk stays with us, so I would like to review our two-step approvals against their rules.
+
+    Moving to Brightline needs three changes on our side, and the first may be substantial. Our HR system currently sends all employee changes in one nightly file, but Brightline set approval rules per file, not per change type, so if salary changes stay in the same file as address changes they would be approved without review too, and our developers will need to split them out, which may need a change request, so I will get a scope and cost before we commit. Separately, every pay-related form must move to Brightline's templates, not just the payslip, and we must reconcile each pay run ourselves, since Brightline do not send a confirmation for off-cycle payments.
+
+    Brightline also require an independent controls review before go-live. Based on a 2026 market survey, a review for a firm our size costs USD 15,000 to 30,000, a simple single-country review runs USD 5,000 to 10,000, and a multi-entity group review goes past USD 50,000. We have three countries and a custom approval layer, so I would budget mid-range. Rush timelines add 20 to 40 per cent, so I will start these conversations now.
+
+    To move forward, Brightline have offered a free test environment. I propose we accept and nominate Mr Daniel as the first user; he can spend two days testing. In parallel I will start the controls review conversations and meet our developers on the file split.
+
+    I will send our full response later next week and will need your input then.
+
+    Regards,
+    Sam"
+graders:
+  - name: changes-as-points
+    type: llm
+    focus: last_message
+    criteria: "Look only at the revised email itself (ignore any Structure or summary section after it). PASS if the three changes on our side (splitting salary changes out of the nightly file, moving pay forms to Brightline's templates, reconciling pay runs ourselves) appear in the email body as three separate numbered or bulleted lines.\nFAIL if they are written together in a paragraph."
+  - name: review-costs-as-points
+    type: llm
+    focus: last_message
+    criteria: "Look only at the revised email itself. PASS if the controls-review cost figures (USD 15,000-30,000 mid-range, USD 5,000-10,000 simple, over USD 50,000 multi-entity) appear as separate lines or a table, or if the email keeps only the one budget figure and drops the other tiers.\nFAIL if all three tiers are run together in a single sentence or paragraph."
+  - name: capabilities-as-points
+    type: llm
+    focus: last_message
+    criteria: "Look only at the revised email itself. PASS if what Brightline said yes to (monthly and off-cycle payroll, tax filing in three countries, the self-service portal, the live integration, the USD 5 million cover, automatic push of approved changes) is laid out as separate bulleted or numbered lines, at least for the main items.\nFAIL if these are all in prose paragraphs."
+  - name: still-answer-first
+    type: llm
+    focus: last_message
+    criteria: "PASS if the revised email opens (after the greeting) with the main point or recommendation within its first two sentences, and the request about the test environment and Mr Daniel is clearly stated as an ask.\nFAIL otherwise."

@@ -12,16 +12,17 @@ Every piece follows the same shape: state the main point first, support it with 
 |---|---|---|
 | **top-down-brief** | Automatically, whenever you write or polish a formal email, memo, letter, report, proposal, update, announcement or slide text | Builds the structure (main point, Situation–Complication–Question introduction, 2–5 non-overlapping key points, evidence, clear ask), writes in house style and runs a pre-send checklist |
 | **/top-down-brief:draft** | You run it with notes or a brief | Produces a send-ready draft, a one-glance structure summary, and a list of placeholders to fill in |
-| **/top-down-brief:review** | You run it with a pasted or attached draft | Gives a verdict (Ready to send / Minor fixes / Needs restructuring), a six-point scorecard, the key issues, and a restructured version |
+| **/top-down-brief:review** | You run it with a pasted or attached draft | Gives a verdict (Ready to send / Minor fixes / Needs restructuring), a seven-point scorecard, the key issues, and a restructured version |
 
-## The six checks
+## The seven checks
 
 1. **Answer first**: the main point or request is in the first two sentences and the subject line.
 2. **Question answered**: the piece answers the one question the reader has.
 3. **Key-point logic**: 2–5 supporting points, the same kind of idea, no overlaps or gaps, deliberately ordered.
 4. **Support**: specific facts back each point; nothing irrelevant; nothing invented.
 5. **Clear ask**: specific action, owner and deadline.
-6. **Tone**: plain, precise, courteous and confident; matches the reader and house style.
+6. **Layout**: points are laid out as points. When a sentence announces a set ("three changes", "two conditions") or there are three or more parallel items, each gets its own line under a one-sentence lead-in, so the body shows the same structure as the skeleton. Prose stays for reasoning and sensitive messages.
+7. **Tone**: plain, precise, courteous and confident; matches the reader and house style.
 
 ## Example
 
@@ -64,12 +65,17 @@ skills/
       pyramid-rules.md     structure rules and common fixes
       introductions.md     Situation–Complication–Question patterns by document type
       formats.md           email, memo, letter, report, proposal, update, slides
+      layout.md            when to use points and when to keep prose
       tone.md              professional tone rules and wording swaps
       checklist.md         pre-send checklist and verdict rules
       house-style.md       organization conventions (edit this)
   draft/SKILL.md           /top-down-brief:draft
   review/SKILL.md          /top-down-brief:review
 ```
+
+## What's new in 1.1.0
+
+Points are now laid out as points. Before, a draft could announce "three changes" and then explain them in one long paragraph, leaving the reader to dig them out; the list appeared only in the Structure summary. Now, whenever a sentence announces a set or there are three or more parallel items, each gets its own numbered or bulleted line under a one-sentence lead-in, and the body matches the Structure summary. Prose stays for the main point, chains of reasoning and sensitive messages. Layout is the seventh check in reviews, and email paragraphs are capped at three sentences.
 
 ## Works well with
 

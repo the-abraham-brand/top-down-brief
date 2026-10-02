@@ -49,6 +49,8 @@ Subject line rules:
 - Lead with a tag when the reader must act: `Approval needed:`, `Decision needed:`, `Action required:`, `FYI:`, `Update:`.
 - Then the message, not the topic. Aim for under ~60 characters where possible.
 
+Longer emails: keep the same shape. Under each key-line point, write a one-sentence lead-in, then the items as numbered or bulleted lines (see `layout.md`). A key-line point should never arrive as a paragraph that lists three or more things.
+
 Length: aim for one screen. If the email needs more than ~250 words of body, consider moving detail into an attachment and keeping the email as the pyramid's top two levels.
 
 ## Memo / briefing note
@@ -59,7 +61,7 @@ To / From / Date / Subject (subject states the conclusion)
 [Opening paragraph: S-C in 1–3 sentences, then the answer.]
 
 [One heading per key-line point, each heading a full statement in parallel form.]
-  [1–2 paragraphs or a few bullets of support under each.]
+  [A one-sentence lead-in, then bullets for parallel items; a short paragraph only for reasoning.]
 
 Next steps / Decision required
   [Numbered actions with owner and date.]
@@ -69,7 +71,7 @@ Next steps / Decision required
 
 - Letterhead, date, recipient, reference line if applicable, salutation.
 - First paragraph: purpose and main point ("I am writing to confirm that...", "We are pleased to propose...").
-- Middle: key-line points as short paragraphs, one idea each.
+- Middle: key-line points as short paragraphs, one idea each. Any requirements, conditions, enclosures or steps of three or more go on numbered lines (`layout.md`).
 - Final paragraph: the ask or next step, and a named contact.
 - Close: "Yours sincerely" when the recipient is named; "Yours faithfully" when not (British convention); "Sincerely" in US usage. Follow `house-style.md`.
 
